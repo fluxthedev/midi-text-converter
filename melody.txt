@@ -1,0 +1,95 @@
+Note: C5
+Position: C5
+Duration: 0.25 seconds
+Velocity: 100
+Pitch Direction: N/A
+
+Note: B4
+Position: B4
+Duration: 0.25 seconds
+Velocity: 70
+Pitch Direction: Down
+
+Note: C5
+Position: C5
+Duration: 0.125 seconds
+Velocity: 100
+Pitch Direction: Up
+
+Note: G4
+Position: G4
+Duration: 0.125 seconds
+Velocity: 70
+Pitch Direction: Down
+
+Note: B4
+Position: B4
+Duration: 0.25 seconds
+Velocity: 100
+Pitch Direction: Up
+
+Note: Eb5
+Position: Eb5
+Duration: 0.25 seconds
+Velocity: 70
+Pitch Direction: Up
+
+Note: D5
+Position: D5
+Duration: 0.125 seconds
+Velocity: 100
+Pitch Direction: Down
+
+Note: C5
+Position: C5
+Duration: 0.125 seconds
+Velocity: 70
+Pitch Direction: Down
+
+Note: Bb4
+Position: Bb4
+Duration: 0.25 seconds
+Velocity: 100
+Pitch Direction: Down
+
+Note: A4
+Position: A4
+Duration: 0.25 seconds
+Velocity: 70
+Pitch Direction: Down
+
+Note: G4
+Position: G4
+Duration: 0.125 seconds
+Velocity: 100
+Pitch Direction: Down
+
+Note: A4
+Position: A4
+Duration: 0.125 seconds
+Velocity: 70
+Pitch Direction: Up
+
+Note: Bb4
+Position: Bb4
+Duration: 0.25 seconds
+Velocity: 100
+Pitch Direction: Up
+
+Note: G4
+Position: G4
+Duration: 0.25 seconds
+Velocity: 70
+Pitch Direction: Down
+
+Note: F4
+Position: F4
+Duration: 0.25 seconds
+Velocity: 100
+Pitch Direction: Down
+
+Note: G4
+Position: G4
+Duration: 0.25 seconds
+Velocity: 70
+Pitch Direction: Up
