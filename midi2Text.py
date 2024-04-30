@@ -1,4 +1,7 @@
+
 import pretty_midi
+import argparse
+
 
 def midi_to_text(midi_file, output_file):
     # Load MIDI file
@@ -38,9 +41,13 @@ def midi_to_text(midi_file, output_file):
 
     print(f"MIDI file converted to text. Output saved as '{output_file}'.")
 
-# Specify the input MIDI file and output text file
-midi_file = './melody.mid'
-output_file = './melody.txt'
+
+# Parse command line arguments
+parser = argparse.ArgumentParser(
+    description='Convert MIDI file to text representation.')
+parser.add_argument('midi_file', type=str, help='Input MIDI file')
+parser.add_argument('output_file', type=str, help='Output text file')
+args = parser.parse_args()
 
 # Call the function to convert MIDI to text
-midi_to_text(midi_file, output_file)
+midi_to_text(args.midi_file, args.output_file)
