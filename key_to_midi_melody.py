@@ -8,7 +8,7 @@ minor_scale_intervals = [2, 1, 2, 2, 1, 2, 2]
 
 # MIDI note numbers for C0 to B8
 note_numbers = {
-    'C': 0, 'C#': 1, 'D': 2, 'D#':3, 'E':4, 'F':5, 'F#':6,
+    'C': 0, 'C#': 1, 'D': 2, 'D#': 3, 'E': 4, 'F': 5, 'F#':6,
     'G':7, 'G#':8, 'A':9, 'A#':10, 'B':11
 }
 
@@ -72,22 +72,28 @@ def save_melody_to_midi(melody, filename='melody.mid', tempo=500000):
     mid.save(filename)
     print(f"Melody saved to {filename}")
 
-if name == 'main':
-    # User inputs
-    key = input("Enter the key (e.g., C, D#, F): ").strip()
-    scale_type = input("Enter the scale type ('major' or 'minor'): ").strip()
-    length = int(input("Enter the length of the melody (number of notes): "))
-    tempo_bpm = int(input("Enter the tempo in BPM (e.g., 120): "))
-    filename = input("Enter the output MIDI filename (e.g., 'melody.mid'): ").strip()
+# User inputs
+key = input("Enter the key (e.g., C, D#, F): ").strip()
+scale_type = input("Enter the scale type ('major' or 'minor'): ").strip()
+length = int(input("Enter the length of the melody (number of notes): "))
+tempo_bpm = int(input("Enter the tempo in BPM (e.g., 120): "))
+filename = input("Enter the output MIDI filename (e.g., 'melody.mid'): ").strip()
 
-    # Convert BPM to microseconds per beat for MIDI tempo
-    tempo = mido.bpm2tempo(tempo_bpm)
+# Convert BPM to microseconds per beat for MIDI tempo
+tempo = mido.bpm2tempo(tempo_bpm)
 
-    # Build scale
+# Build scale
+try:
     scale = build_scale(key, scale_type)
+except KeyError:
+    print(f"Invalid key '{key}'. Please enter a valid key (e.g., C, C#, D, etc.).")
+    exit(1)
+except ValueError as ve:
+    print(ve)
+    exit(1)
 
-    # Generate melody
-    melody = generate_melody(scale, length)
+# Generate melody
+melody = generate_melody(scale, length)
 
-    # Save to MIDI
-    save_melody_to_midi(melody, filename, tempo)
+# Save to MIDI
+save_melody_to_midi(melody, filename, tempo)
